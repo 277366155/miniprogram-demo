@@ -1,0 +1,24 @@
+<!--pages/home/home.wxml-->
+<swiper circular indicator-dots autoplay>
+	<swiper-item wx:for="{{swiperList}}" wx:key="id">
+		<image src="{{item.image}}" ></image>
+	</swiper-item>
+</swiper>
+<!-- 九宫格区域 -->
+<view class="grid-list">
+	
+	<navigator class="grid-item" url="/pages/shopList/shopList?id={{item.id}}&title={{item.name}}" wx:for="{{gridList}}" wx:key="id">
+		<image src="{{item.icon}}"></image>
+		<!-- 跳转到tabBar页面 ,必须设置跳转方式open-type=switchTab -->
+		<!-- <navigator url="/pages/message/message" open-type="switchTab"> -->
+			<text>{{item.name}}</text>
+		<!-- </navigator> -->
+	</navigator>	
+</view>
+
+<!-- 图片区域 -->
+<view class="img-box">
+	<image src="/images/p1.jpg" mode="widthFix" bindtap="gotoMessage"></image>
+	<image src="/images/p2.jpg" mode="widthFix" bindtap="gotoInfo"></image>
+</view>
+<navigator url="/pages/info/info?id=2&type=b" open-type="navigate"> 导航到非tabBar页面，open-type=navigate可省略</navigator>

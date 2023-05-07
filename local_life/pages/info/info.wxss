@@ -1,0 +1,14 @@
+/* pages/info/info.wxss */
+.box{
+	height: 2000rpx;
+	background-color:cadetblue;
+}
+.num-item{
+	border: 1rpx solid #efefef;
+	border-radius:  10rpx;
+	line-height: 100rpx;
+	margin: 15rpx;
+	text-align: center;
+	text-shadow: 0rpx 0rpx 10rpx #fff;
+	box-shadow: 1rpx 1rpx 6rpx #aaa;
+}

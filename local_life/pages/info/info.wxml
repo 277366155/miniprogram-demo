@@ -1,0 +1,9 @@
+<!--pages/info/info.wxml-->
+<text>pages/info/info.wxml</text>
+<navigator delta="1" open-type="navigateBack">后退一级，delta=1可省略，即默认为后退一级</navigator>
+
+<view>count值是：{{count}}</view>
+<button bindtap="addCount">+1</button>
+<button bindtap="goBack">后退</button>
+
+<view wx:for="{{colorList}}" wx:key="index" style="background-color: rgba({{item}});" class="num-item">{{item}}</view>

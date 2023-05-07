@@ -1,0 +1,15 @@
+function toLower(msg){
+	return msg.toLowerCase()
+}
+// 将手机号按照3-4-4的格式进行分割
+function splitPhone(str){
+	if(str.length!==11) return str
+	var arr=str.split('')
+	arr.splice(3,0,'-')
+	arr.splice(8,0,'-')
+	return arr.join('')
+}
+module.exports={
+	toLower:toLower,
+	splitPhone:splitPhone
+}
