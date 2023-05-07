@@ -1,0 +1,24 @@
+<!--pages/list/list.wxml-->
+<swiper class="swiper-container" indicator-dots  indicator-color="#FFF" indicator-active-color="#AAA" autoplay interval="3000" circual>
+  <swiper-item><view class="item">A</view></swiper-item>
+  <swiper-item><image src="/images/1.jpeg"  mode="aspectFill"></image></swiper-item>
+  <swiper-item><view class="item">C</view></swiper-item>
+</swiper>
+<view class="container">
+<scroll-view class="container1" scroll-y>
+  <view>
+    A.支持长按选中效果：
+    <text selectable>testText</text>
+  </view>
+  <view>
+  <rich-text nodes="<h2 style='color:green'>B.这里是标题</h2>"></rich-text>
+  </view>
+  <view>C</view>
+</scroll-view>
+
+
+</view>
+<button type="default" >默认按钮</button>
+<button type="primary" size="mini">主色按钮</button>
+<button type="warn" size="mini" plain>警告按钮</button>
+<image src="/images/1.jpeg"  mode="aspectFill"></image>

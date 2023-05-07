@@ -1,0 +1,28 @@
+<view>{{info}}</view>
+<image src="{{imgSrc}}" mode="widthFix"></image>
+<!-- hidden只是给view加了隐藏样式，主要用于显隐切换的地方 -->
+<view hidden="{{true}}">{{randomNum>=5?randomNum+"数字大于5":randomNum+"数字小于5"}}</view>
+<view>{{randomNum2 *100}}</view>
+<view>count：{{count}}
+</view>
+<button type="primary" bindtap="onTapHandler" >+1</button>
+<button type="default" bindtap="onTapResetHandler" data-info="{{1}}">reset</button>
+<input bindinput="onInputHandler" value="{{msg}}"></input>
+<!-- block标签仅做节点包裹，不会被渲染出来。
+ws:if标记的元素，如果满足隐藏条件，则不会渲染出来元素 -->
+<block wx:if="{{showGender}}">
+	<view wx:if="{{type===1}}">男</view>
+	<view wx:elif="{{type===2}}">女</view>
+	<view wx:else>保密</view>
+</block>
+<!-- 使用wx:key提高遍历性能 -->
+<view wx:for="{{arr1}}" wx:key="index">
+	索引为{{index}}，值为{{item}}
+</view>
+<!-- 自定义索引名和成员名 -->
+<view wx:for="{{arr1}}" wx:for-index="id" wx:for-item="val" style="color: red;" wx:key="id">
+	索引为{{id}}，值为{{val}}
+</view>
+<view wx:for="{{userList}}" wx:key="id" class="username">
+	学生id：{{item.id}}，姓名：{{item.name}}
+</view>

@@ -1,0 +1,6 @@
+/* pages/home/index.wxss */
+@import "../../common/common.wxss";
+
+input{
+	background-color:aquamarine
+}
