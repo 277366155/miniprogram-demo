@@ -1,0 +1,9 @@
+<!--components/test/test.wxml-->
+<text class="g-red-text">
+components/test
+(全局样式的class选择器对组件无效)
+</text>
+
+<view>count的值是：{{count}}</view>
+<button bindtap="addCount">+1</button>
+<button bindtap="showInfo">showInfo</button>
